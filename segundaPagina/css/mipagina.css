@@ -1,0 +1,16 @@
+header{
+    background-color: aqua;
+    width: auto;
+    height: 200px;
+}
+
+main{
+    background-color: chartreuse;
+    width: auto;
+    height: 600px;
+}
+
+footer{
+    background-color: gold;
+    
+}
