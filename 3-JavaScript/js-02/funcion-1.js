@@ -27,8 +27,22 @@ console.log("La resta es "+ res);
 
 //EJERCICIO
 
-function miNombre(a, b){
-    let resultado = (a, b);  
-    console.log("My name is ",+ resultado);  
+function myName(name, lname1, lname2){
+    nombre = name + " " + lname1 + " " + lname2
+    return (nombre);
 }
-miNombre ("Fernando" + "Rubio")
+
+let name = "Fernando"
+let lname1 = "Rubio"
+let lname2 = "Gallegos"
+
+console.log("My name is " + myName(name, lname1, lname2));
+
+
+
+
+function satanicDivision (a, b){
+    return (a/b);
+}
+
+console.log(satanicDivision(2, 3));
