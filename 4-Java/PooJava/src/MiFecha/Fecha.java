@@ -30,7 +30,7 @@ public class Fecha {
     }
 
     public String formaF(){
-        return ""+getDia()+"/"+getMes()+"/"getAnio();
+        return ""+getDia()+"/"+getMes()+"/";getAnio();
     }
 
 
