@@ -1,0 +1,47 @@
+package com.generation.frg.services;
+
+import org.springframework.stereotype.Service;
+
+import com.generation.frg.models.UsuarioModel;
+import com.generation.frg.repositories.UsuarioRepository;
+
+import java.util.ArrayList;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+
+@Service
+public class UsuarioService {
+	@Autowired
+	UsuarioRepository usuarioRepository;
+	
+	public ArrayList<UsuarioModel> obtenerusuarios(){
+		return (ArrayList<UsuarioModel>) usuarioRepository.findAll();
+		
+		
+	}	
+	
+	public UsuarioModel guardarUsuario(UsuarioModel usuario){
+        return usuarioRepository.save(usuario);
+    }
+
+	public Optional<UsuarioModel> obtenerPorId(Long id){
+        return usuarioRepository.findById(id);
+    }
+
+	public ArrayList<UsuarioModel>  obtenerPorPrioridad(Integer prioridad) {
+        return usuarioRepository.findByPrioridad(prioridad);
+    }
+
+	public boolean eliminarUsuario(Long id) {
+        try{
+            usuarioRepository.deleteById(id);
+            return true;
+        }catch(Exception err){
+            return false;
+        }
+    }
+
+	
+}
